@@ -1,3 +1,16 @@
-<p>
-  listar works!
-</p>
+<table  border="1">
+    
+    <tr>
+      <td>Nombre</td>
+      <td>Posicion</td>
+      <td>Ciudad</td>
+      <td>Numero</td>
+  </tr>
+  <tr *ngFor="let jugador of jugadorService.jugadorList"> 
+      <td>{{jugador.nombre}}</td>
+      <td>{{jugador.posicion}}</td>
+      <td>{{jugador.ciudad}}</td>
+      <td>{{jugador.numero}}</td>
+  </tr>
+  </table>
+  <br/>

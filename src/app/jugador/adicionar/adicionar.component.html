@@ -1,3 +1,60 @@
-<p>
-  adicionar works!
-</p>
+
+
+<form #addform="ngForm">
+    
+  <table>
+    <tr>
+      <td>
+        <md-form-field>
+          <input required mdInput placeholder="Nombre"[(ngModel)]="jugador.nombre" name="nombre" #nombre="ngModel">
+          <md-error>
+             
+          </md-error>
+
+        </md-form-field>
+      </td> 
+    </tr>
+    <tr>
+      <td>
+          <md-form-field>
+          <input required mdInput placeholder="Posicion" [(ngModel)]="jugador.posicion" name="posicion" #posicion="ngModel">
+          <md-error>
+            
+          </md-error>
+        </md-form-field>
+
+          
+      </td> 
+    </tr>
+    <tr>
+      <td>
+          <md-form-field>
+              <input required mdInput placeholder="Ciudad" [(ngModel)]="jugador.ciudad" name="ciudad" #ciudad="ngModel">
+              <md-error>
+                
+              </md-error>
+            </md-form-field>
+      </td> 
+    </tr>
+    <tr>
+      <td>
+          <md-form-field>
+              <input required mdInput placeholder="Numero" [(ngModel)]="jugador.numero" name="numero" #numero="ngModel">
+              <md-error>
+                
+              </md-error>
+            </md-form-field>
+      </td> 
+    </tr>
+    
+    <tr>
+      <td>
+          <div class="button-row">
+              <button [disabled]="!addform.valid"  md-raised-button color="primary"(click)="onSaveClick()">Guardar</button>
+          </div>
+
+          
+      </td> 
+    </tr>
+  </table>
+</form>
