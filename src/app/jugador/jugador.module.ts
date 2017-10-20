@@ -40,7 +40,8 @@ import {
   MatTabsModule,
   MatToolbarModule,
   MatTooltipModule,
-  MatStepperModule 
+  MatStepperModule,
+   
 } from '@angular/material';
 import { JugadorService } from "./jugador-service.service";
 

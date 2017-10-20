@@ -1,3 +1,42 @@
-<p>
-  adicionar works!
-</p>
+
+
+<form #addform="ngForm">
+  Adicione Equipo
+<table>
+  <tr>
+    <td>
+      <md-form-field >
+        <input required mdInput placeholder="Nombre"[(ngModel)]="equipo.nombre" name="nombre"#nombre="ngModel">
+      </md-form-field>
+    </td> 
+  </tr>
+  <tr>
+    <td>
+      <md-form-field >
+        <input required mdInput placeholder="Ciudad"[(ngModel)]="equipo.ciudad" name="ciudad"#ciudad="ngModel">
+      </md-form-field>
+    </td> 
+  </tr>
+  <tr>
+    <td>
+      <md-form-field >
+        <input required mdInput placeholder="Categoria"[(ngModel)]="equipo.categoria" name="categoria"#categoria="ngModel">
+      </md-form-field>
+    </td> 
+  </tr>
+  <tr>
+    <td>
+      <md-form-field 
+      >
+        <input required mdInput placeholder="Fundado"[(ngModel)]="equipo.fundado" name="fundado"#fundado="ngModel">
+      </md-form-field>
+    </td> 
+  </tr>
+  <tr>
+    <td>
+      guardar
+    </td> 
+  </tr>
+
+</table>
+</form>

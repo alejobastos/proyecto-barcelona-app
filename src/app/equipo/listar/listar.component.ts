@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-listar',
+  selector: 'equipo-listar',
   templateUrl: './listar.component.html',
   styleUrls: ['./listar.component.css']
 })

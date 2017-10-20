@@ -1,3 +1,36 @@
-<p>
-  adicionar works!
-</p>
+<form #addform="ngForm">
+Adicione Partido
+<table>
+<tr>
+  <td>
+    <md-form-field   >
+      <input required mdInput placeholder="Estadio"[(ngModel)]="partido.estadio" name="estadio"#estadio="ngModel">
+      <md-error>
+        
+     </md-error>  
+    </md-form-field>
+  </td> 
+</tr>
+<tr>
+  <td>
+    <md-form-field  >
+      <input required mdInput placeholder="Fecha"[(ngModel)]="partido.fecha" name="fecha"#fecha="ngModel">
+    </md-form-field>
+  </td> 
+</tr>
+<tr>
+  <td>
+    <md-form-field  >
+      <input required mdInput placeholder="Hora"[(ngModel)]="partido.hora" name="hora"#hora="ngModel">
+    </md-form-field>
+  </td> 
+</tr>
+
+<tr>
+  <td>
+    guardar
+  </td> 
+</tr>
+
+</table>
+</form>

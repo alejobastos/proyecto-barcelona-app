@@ -44,12 +44,14 @@ import {
 import{RouterModule, Routes}from '@angular/router';
 import{IndexComponent}from './jugador/index/index.component';
 import{AdicionarComponent as EquipoAdicionarComponet}from './equipo/adicionar/adicionar.component';
+import{AdicionarComponent as PartidoAdicionarComponet}from './partido/adicionar/adicionar.component';
 
 
 const appRoutes: Routes = [
   {path: 'jugador/index', component:IndexComponent},
   {path: 'equipo/adicionar', component:EquipoAdicionarComponet},
-
+  {path: 'partido/adicionar', component:PartidoAdicionarComponet},
+  
 ]
 
 @NgModule({
