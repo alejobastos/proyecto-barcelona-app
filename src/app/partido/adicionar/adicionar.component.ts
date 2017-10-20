@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { partido } from "../partido";
+import { PartidoService } from "../partido-service.service";
 
 @Component({
   selector: 'partido-adicionar',
@@ -10,10 +11,17 @@ export class AdicionarComponent implements OnInit {
 
   partido: partido;
 
-  constructor() { }
+  constructor(private partidoService:PartidoService) { }
 
   ngOnInit() {
     this.partido = new partido;
   }
+  onNewClick(){
+    this.partido = new partido();
+  }
+  onSaveClick(){
+    this.partidoService.partidoList.push(this.partido);
+  }
+  
 
 }

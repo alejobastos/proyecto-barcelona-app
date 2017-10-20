@@ -18,6 +18,10 @@ export class AdicionarComponent implements OnInit {
     this.jugador = new jugador();
    
   }
+  
+  onNewClick(){
+    this.jugador = new jugador();
+  }
 onSaveClick(){
 this.jugadorService.jugadorList.push(this.jugador);
 

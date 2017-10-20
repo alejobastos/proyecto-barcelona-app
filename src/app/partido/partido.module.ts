@@ -37,6 +37,7 @@ import {
   MatTooltipModule,
   MatStepperModule 
 } from '@angular/material';
+import { PartidoService } from "./partido-service.service";
 
 @NgModule({
   imports: [
@@ -74,6 +75,7 @@ import {
     MatTooltipModule,
     MatStepperModule
   ],
-  declarations: [AdicionarComponent, ListarComponent, IndexComponent]
+  declarations: [AdicionarComponent, ListarComponent, IndexComponent],
+  providers:[PartidoService]
 })
 export class PartidoModule { }

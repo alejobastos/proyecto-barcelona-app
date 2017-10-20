@@ -1,3 +1,16 @@
-<p>
-  listar works!
-</p>
+<table  border="1">
+  
+  <tr>
+    <td>Nombre</td>
+    <td>Ciudad</td>
+    <td>Categoria</td>
+    <td>Fundado</td>
+</tr>
+<tr *ngFor="let equipo of equipoService.equipoList" > 
+    <td>{{equipo.nombre}}</td>
+    <td>{{equipo.ciudad}}</td>
+    <td>{{equipo.categoria}}</td>
+    <td>{{equipo.fundado}}</td>
+</tr>
+</table>
+<br/>

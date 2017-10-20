@@ -34,7 +34,10 @@
   </tr>
   <tr>
     <td>
-      guardar
+      <div class="button-row">
+          <button   md-raised-button color="primary"(click)="onNewClick()">Nuevo</button>
+        <button [disabled]="!addform.valid"  md-raised-button color="primary"(click)="onSaveClick()">Guardar</button>
+    </div>
     </td> 
   </tr>
 
