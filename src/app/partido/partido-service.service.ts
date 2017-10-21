@@ -8,7 +8,7 @@ export class PartidoService{
   constructor(private http: HttpClient) { }
   
     cargarpartido() {
-      this.http.get("http://192.168.2.210:8080/ProyectoEquipoApp/webresources/edu.co.proyectoequipoapp.entidades.partido").subscribe(data => {
+      this.http.get("http://192.168.43.13:8080/ProyectoEquipoApp/webresources/edu.co.proyectoequipoapp.entidades.partido").subscribe(data => {
         this.partidoList = data as Array<partido>;
       });
     }
@@ -16,7 +16,7 @@ export class PartidoService{
     crearpartido(par: partido) {
       const body = {estadio: par.estadio, fecha: par.fecha, hora: par.hora};
   
-      this.http.post("http://192.168.2.210:8080/ProyectoEquipoApp/webresources/edu.co.proyectoequipoapp.entidades.partido", body)
+      this.http.post("http://192.168.43.13:8080/ProyectoEquipoApp/webresources/edu.co.proyectoequipoapp.entidades.partido", body)
       .subscribe(data => {
         alert('Partido creado Con Exito!');
         this.cargarpartido();

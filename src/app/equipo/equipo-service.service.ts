@@ -10,7 +10,7 @@ export class EquipoService {
   constructor(private http: HttpClient) { }
   
     cargarEquipo() {
-      this.http.get("http://192.168.2.210:8080/ProyectoEquipoApp/webresources/edu.co.proyectoequipoapp.entidades.equipo").subscribe(data => {
+      this.http.get("http://192.168.43.13:8080/ProyectoEquipoApp/webresources/edu.co.proyectoequipoapp.entidades.equipo").subscribe(data => {
         this.equipoList = data as Array<equipo>;
       });
     }
@@ -18,7 +18,7 @@ export class EquipoService {
     crearEquipo(equ: equipo) {
       const body = {nombre: equ.nombre, ciudad: equ.ciudad, categoria: equ.categoria, fundado: equ.fundado};
   
-      this.http.post("http://192.168.2.210:8080/ProyectoEquipoApp/webresources/edu.co.proyectoequipoapp.entidades.equipo", body)
+      this.http.post("http://192.168.43.13:8080/ProyectoEquipoApp/webresources/edu.co.proyectoequipoapp.entidades.equipo", body)
       .subscribe(data => {
         alert('Equipo creado con exito Con Exito!');
         this.cargarEquipo();
