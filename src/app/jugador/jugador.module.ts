@@ -8,6 +8,7 @@ import { ListarComponent } from './listar/listar.component';
 import { IndexComponent } from './index/index.component';
 
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import {
   MatAutocompleteModule,
@@ -80,7 +81,8 @@ import { JugadorService } from "./jugador-service.service";
     MatToolbarModule,
     MatTooltipModule,
     MatStepperModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   declarations: [ AdicionarComponent, ListarComponent, IndexComponent],
   providers:[JugadorService]

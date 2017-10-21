@@ -1,39 +1,28 @@
 import { Injectable } from '@angular/core';
 import { jugador } from "./jugador";
+import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class JugadorService {
   
   jugadorList:Array<jugador>;
 
-  constructor() {
-    this.jugadorList = [
-      {
-      nombre:"Juan",
-      posicion:"volante",
-      ciudad:"Maizales",
-      numero:9
-      },
-      
-      {
-        nombre:"Daniel",
-        posicion: "portero",
-        ciudad:"Cali",
-        numero:1
-        },
-      {
-          nombre:"Santiago",
-          posicion: "lateral",
-          ciudad:"Medellin",
-          numero:4
-          },
-      {
-            nombre:"Alejandro",
-            posicion: "delantero",
-            ciudad:"Manizales",
-            numero:16
-            },
-    ];
-   }
-
+  constructor(private http: HttpClient) { }
+  
+    cargarJugadores() {
+      this.http.get("http://localhost:8080/proyectoangular/webresources/co.edu.equipo.entidades.jugador").subscribe(data => {
+        this.jugadorList = data as Array<jugador>;
+      });
+    }
+  
+    crearJugador(jug: jugador) {
+      const body = {nombre: jug.nombre,ciudad: jug.ciudad,numero: jug.numero,posicio: jug.posicion };
+  
+      this.http.post("http://localhost:8080/proyectoangular/webresources/co.edu.equipo.entidades.jugador", body)
+      .subscribe(data => {
+        alert('Jugador creado Con Exito!');
+        this.cargarJugadores();
+      });
+    }
+  
 }

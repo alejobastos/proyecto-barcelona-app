@@ -8,12 +8,12 @@ import { JugadorService } from "../jugador-service.service";
 })
 export class ListarComponent implements OnInit {
  
-  jugadorList:Array<jugador>;
+  
   
   constructor(private jugadorService:JugadorService) { }
 
   ngOnInit() {
-    
+    this.jugadorService.cargarJugadores();
   }
 
 }
