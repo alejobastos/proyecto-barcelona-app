@@ -20,6 +20,6 @@ export class AdicionarComponent implements OnInit {
     this.equipo = new equipo();
   }
   onSaveClick(){
-    this.equipoService.equipoList.push(this.equipo);
+    this.equipoService.crearEquipo(this.equipo);
 }
 }

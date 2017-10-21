@@ -43,14 +43,14 @@ import {
 } from '@angular/material';
 import{RouterModule, Routes}from '@angular/router';
 import{IndexComponent}from './jugador/index/index.component';
-import{AdicionarComponent as EquipoAdicionarComponet}from './equipo/adicionar/adicionar.component';
-import{AdicionarComponent as PartidoAdicionarComponet}from './partido/adicionar/adicionar.component';
+import{IndexComponent as EquipoIndexComponet}from './equipo/index/index.component';
+import{IndexComponent as PartidoIndexComponet}from './partido/index/index.component';
 
 
 const appRoutes: Routes = [
   {path: 'jugador/index', component:IndexComponent},
-  {path: 'equipo/adicionar', component:EquipoAdicionarComponet},
-  {path: 'partido/adicionar', component:PartidoAdicionarComponet},
+  {path: 'equipo/index', component:EquipoIndexComponet},
+  {path: 'partido/index', component:PartidoIndexComponet},
   
 ]
 

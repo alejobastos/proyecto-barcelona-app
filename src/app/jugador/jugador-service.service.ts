@@ -10,15 +10,15 @@ export class JugadorService {
   constructor(private http: HttpClient) { }
   
     cargarJugadores() {
-      this.http.get("http://localhost:8080/proyectoangular/webresources/co.edu.equipo.entidades.jugador").subscribe(data => {
+      this.http.get("http://192.168.2.210:8080/ProyectoEquipoApp/webresources/edu.co.proyectoequipoapp.entidades.jugador").subscribe(data => {
         this.jugadorList = data as Array<jugador>;
       });
     }
   
     crearJugador(jug: jugador) {
-      const body = {nombre: jug.nombre,ciudad: jug.ciudad,numero: jug.numero,posicio: jug.posicion };
+      const body = {nombre: jug.nombre,ciudad: jug.ciudad,numero: jug.numero,posicion: jug.posicion };
   
-      this.http.post("http://localhost:8080/proyectoangular/webresources/co.edu.equipo.entidades.jugador", body)
+      this.http.post("http://192.168.2.210:8080/ProyectoEquipoApp/webresources/edu.co.proyectoequipoapp.entidades.jugador", body)
       .subscribe(data => {
         alert('Jugador creado Con Exito!');
         this.cargarJugadores();

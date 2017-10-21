@@ -20,7 +20,7 @@ export class AdicionarComponent implements OnInit {
     this.partido = new partido();
   }
   onSaveClick(){
-    this.partidoService.partidoList.push(this.partido);
+    this.partidoService.crearpartido(this.partido);
   }
   
 

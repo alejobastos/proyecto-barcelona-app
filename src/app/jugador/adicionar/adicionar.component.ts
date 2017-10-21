@@ -23,7 +23,7 @@ export class AdicionarComponent implements OnInit {
     this.jugador = new jugador();
   }
 onSaveClick(){
-this.jugadorService.jugadorList.push(this.jugador);
+this.jugadorService.crearJugador(this.jugador);
 
 }
 

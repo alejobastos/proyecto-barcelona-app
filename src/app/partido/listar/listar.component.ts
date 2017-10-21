@@ -14,6 +14,7 @@ export class ListarComponent implements OnInit {
   constructor(private partidoService:PartidoService) { }
 
   ngOnInit() {
+    this.partidoService.cargarpartido();
   }
 
 }
